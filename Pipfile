@@ -7,6 +7,10 @@ verify_ssl = true
 python_version = "3.11"
 
 [packages]
+sdv = "*"
+pandas = "*"
+kaleido = "*"
+tabulate = "*"
 
 [dev-packages]
 black = "==22.3.0"
