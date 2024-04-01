@@ -1,6 +1,6 @@
 [run]
-source = wxm_synthetic_data
-omit = wxm_synthetic_data/__main__.py
+source = synthetic_data
+omit = synthetic_data/__main__.py
 
 [report]
 exclude_lines =

@@ -1,5 +1,4 @@
 setup:
-	pipenv shell
 	pipenv run pre-commit install -t pre-commit
 	pipenv run pre-commit install -t pre-push
 
@@ -19,4 +18,4 @@ coverage:
 	pipenv run pytest --cov --cov-fail-under=100
 	
 run:
-	@pipenv run python -m wxm_synthetic_data.__main__
+	@pipenv run python -m synthetic_data.__main__

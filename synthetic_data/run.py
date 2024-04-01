@@ -11,7 +11,7 @@ from sdv.metadata import SingleTableMetadata
 from sdv.single_table import GaussianCopulaSynthesizer
 
 
-def get_origin_data(path: Path) -> tuple[DataFrame, SingleTableMetadata]:
+def get_source_data(path: Path) -> tuple[DataFrame, SingleTableMetadata]:
     """
     Read the real data from a CSV file and generate metadata from it.
 
@@ -76,6 +76,17 @@ def analyze_data(
     )
 
     return diagnostic, quality_report
+
+
+def write_synthetic_data(root: Path, synthetic_data: DataFrame):
+    """
+    Write the synthetic data to a CSV file.
+
+    Args:
+        root (Path): The root directory to write the synthetic data to.
+        synthetic_data (DataFrame): The synthetic data.
+    """
+    synthetic_data.to_csv(root / "synthetic_data.csv", index=False)
 
 
 def write_report(
